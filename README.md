@@ -34,7 +34,7 @@ or directly see results in the `outputs` folder.
 ---
 
 *Evolution of the probability to bang each pipe as a function of the number of attempts.*
-For each pipe, we assume that player has a probability $p$ to bang this pipe. A lower $p$ indicates skill. As the function of number of attempts, we can show that some players increase their skill quickly, contrary to other ones.
+For each pipe, we assume that player has a probability p to bang this pipe. A lower p indicates skill. As the function of number of attempts, we can show that some players increase their skill quickly, contrary to other ones.
 
 ![Player with quick progression of skill](outputs/08_p_convol20140302_1338298679.png)
 
