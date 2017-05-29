@@ -1,0 +1,20 @@
+##
+# Converting mongdb data to a csv file
+##
+mongod --dbpath ~/flapmmo/data/0raw/20140302/
+mongoexport --db flappylog --collection attempts --out ~/flappylog_all.csv
+mongoexport --db flappylog --collection attempts --out ~/flappylog0.csv -f "id","jumps","mydate"
+# exported 125094 records
+
+mongod --dbpath ~/flapmmo/data/0raw/20140213/
+mongoexport --db flappylog --collection attempts --out ~/flappylog_all.csv
+mongoexport --db flappylog --collection attempts --out ~/flappylog0.csv -f "id","jumps","mydate"
+# exported 422991 records
+
+##
+# Removing lines begining with "date" but without other information
+##
+cd ~/flapmmo/data/0raw/20140302/
+sed '/{ "mydate" : { "$date" : /d' flappylog0.csv >flappylog.csv
+cd ~/flapmmo/data/0raw/20140213/
+sed '/{ "mydate" : { "$date" : /d' flappylog0.csv >flappylog.csv
